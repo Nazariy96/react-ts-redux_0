@@ -1,0 +1,14 @@
+
+@use "./normalizer.scss";
+
+/* -------------------Loader--------------------- */
+@use "./elements/loader/loader";
+
+/* -------------------Navbar--------------------- */
+@use "./elements/navbar/navbar";
+
+/* --------------------Card---------------------- */
+@use "./elements/card/card";
+
+/* -------------------Buttons-------------------- */
+@use "./elements/buttons/btn_generic";

@@ -6,8 +6,8 @@ const Home = () => {
       <div>
         <header>
           <h1>In home</h1>
+          <img src={"./logo512.png"} alt="logo redux" />
         </header>
-        <img src={""} alt="" />
       </div>
     </div>
   );
