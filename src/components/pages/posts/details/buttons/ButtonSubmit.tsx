@@ -9,7 +9,7 @@ const ButtonSubmit = (props: buttonSubmit) => {
   const { type, onClick, className, children } = props
 
   return (
-    <button className={`${className} btn__generic`} type={type} onClick={onClick}>{children}</button>
+    <button className={`${className} btn__generic`} type={type} onClick={onClick}><p>{children}</p></button>
   );
 };
 

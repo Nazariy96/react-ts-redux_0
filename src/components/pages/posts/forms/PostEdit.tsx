@@ -14,7 +14,7 @@ const PostEdit = () => {
   const post = useAppSelector(state => state.postReducer.post)
   const loading = useAppSelector(state => state.postReducer.loading)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const input = e.target.getAttribute('name')
     const value = e.target.value
     switch (input) {
@@ -51,11 +51,11 @@ const PostEdit = () => {
       <>
       {loading ? <Loader/> 
       :
-        <form>
-          {post && <input defaultValue={post.title} name="title" onChange={handleChange} />}
-          {post && <input defaultValue={post.body} name="body" onChange={handleChange} />}
-          <ButtonSubmit type="submit" onClick={handleSubmit} >Submit</ButtonSubmit>
-          <ButtonLink dir={'/posts'}>Cancel</ButtonLink>
+        <form className="c__form">
+          {post && <textarea placeholder="Title..." className="c__form--area textarea" defaultValue={post.title} name="title" onChange={handleChange} />}
+          {post && <textarea placeholder="Body..." className="c__form--area textarea" defaultValue={post.body} name="body" onChange={handleChange} />}
+          <ButtonSubmit className={"c__form--btn"} type="submit" onClick={handleSubmit} >Submit</ButtonSubmit>
+          <ButtonLink className={"c__form--btn"} dir={'/posts'}>Back</ButtonLink>
         </form>
       }
         {post && <Card userId={post.userId} title={post.title} body={post.body}/>}

@@ -12,7 +12,7 @@ type button = {
     return (
         <button className={`${className} btn__generic`}>
             <Link to={dir}>
-                {children}
+                <p>{children}</p>
             </Link>
         </button>
     );

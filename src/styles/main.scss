@@ -11,4 +11,8 @@
 @use "./elements/card/card";
 
 /* -------------------Buttons-------------------- */
-@use "./elements/buttons/btn_generic";
+@use "./elements/buttons/btn__generic";
+
+/* --------------------Form---------------------- */
+
+@use "./elements/form/form.scss";

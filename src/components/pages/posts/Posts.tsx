@@ -30,7 +30,7 @@ const Posts = () => {
 
     return (
         <>
-            {error ? <Error /* err={error} */ />
+            {error ? <Error />
             : loading ? <Loader />
             : posts?.map(card => {
                 return (

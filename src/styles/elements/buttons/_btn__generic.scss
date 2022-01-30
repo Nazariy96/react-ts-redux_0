@@ -1,0 +1,14 @@
+.btn__generic{
+    width: 70px;
+
+    font-size: large;
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    background-color: rgb(23, 116, 133);
+
+    & p{
+        color: rgb(255, 255, 255);
+    }
+}
