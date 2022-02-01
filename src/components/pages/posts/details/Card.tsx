@@ -9,9 +9,9 @@ const Card = (props:card) => {
 
     return (
         <div className="c__card">
-            <h3 className="c__card--element">{title}</h3>
-            <h4 className="c__card--element">{userId}</h4>
-            <p className="c__card--element">{body}</p>
+            <h3 className="c__card--title">{title}</h3>
+            <h4 className="c__card--user">{userId}</h4>
+            <p className="c__card--body">{body}</p>
         </div>
     );
 };

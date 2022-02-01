@@ -37,30 +37,32 @@ const PostEdit = () => {
     }
   }
 
-    const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
-      e.preventDefault()
-      dispatch(PatchPost(String(id),post!))
-    }
+  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+    dispatch(PatchPost(String(id), post!))
+  }
 
 
-    useEffect(() => {
-      dispatch(GetPost(String(id)))
-    }, [dispatch, id])
+  useEffect(() => {
+    dispatch(GetPost(String(id)))
+  }, [dispatch, id])
 
-    return (
-      <>
-      {loading ? <Loader/> 
-      :
+  return (
+    <>
+      {loading ? <Loader />
+        :
         <form className="c__form">
-          {post && <textarea placeholder="Title..." className="c__form--area textarea" defaultValue={post.title} name="title" onChange={handleChange} />}
-          {post && <textarea placeholder="Body..." className="c__form--area textarea" defaultValue={post.body} name="body" onChange={handleChange} />}
-          <ButtonSubmit className={"c__form--btn"} type="submit" onClick={handleSubmit} >Submit</ButtonSubmit>
-          <ButtonLink className={"c__form--btn"} dir={'/posts'}>Back</ButtonLink>
+          {post && <textarea placeholder="Title..." className="c__form--area1 textarea" defaultValue={post.title} name="title" onChange={handleChange} />}
+          {post && <textarea placeholder="Body..." className="c__form--area2 textarea" defaultValue={post.body} name="body" onChange={handleChange} />}
+          <ButtonSubmit className={"c__form--btn1"} type="submit" onClick={handleSubmit} >Submit</ButtonSubmit>
+          <ButtonLink className={"c__form--btn2"} dir={'/posts'}>Back</ButtonLink>
+          <div className="c__form--card">
+            {post && <Card userId={post.userId} title={post.title} body={post.body} />}
+          </div>
         </form>
       }
-        {post && <Card userId={post.userId} title={post.title} body={post.body}/>}
-      </>
-    );
-  };
+    </>
+  );
+};
 
-  export default PostEdit;
+export default PostEdit;

@@ -24,10 +24,9 @@ export const GetAllPosts =
                 payload: res.data,
             });
         } catch (e: unknown) {
-            const message = (e as Error).message
             dispatch({
                 type: POSTS_FAIL,
-                payload: message
+                payload: (e as Error).message
             });
         }
     };

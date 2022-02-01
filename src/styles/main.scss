@@ -1,5 +1,9 @@
-
 @use "./normalizer.scss";
+/* -------------------Error---------------------- */
+@use "./elements/error/error.scss";
+
+/* -------------------Buttons-------------------- */
+@use "./elements/buttons/btnGeneric";
 
 /* -------------------Loader--------------------- */
 @use "./elements/loader/loader";
@@ -10,9 +14,8 @@
 /* --------------------Card---------------------- */
 @use "./elements/card/card";
 
-/* -------------------Buttons-------------------- */
-@use "./elements/buttons/btn__generic";
-
 /* --------------------Form---------------------- */
-
 @use "./elements/form/form.scss";
+
+/* ---------------------Posts-------------------- */
+@use "./elements/posts/postsLayout.scss";

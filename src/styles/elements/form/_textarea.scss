@@ -1,17 +1,18 @@
 .textarea{
-    width: 450px;
-    height: 250px;
+    min-width: 450px;
+    min-height: 250px;
     margin: 10px;
-    
+
+    z-index: 2;
+
 
     border:1px solid rgb(67, 106, 133);
     border-radius: 20px;
 
     padding: 10px;
 
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(255, 255, 255);
 
-    font-size: large;
+    font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    overflow: hidden;
 }

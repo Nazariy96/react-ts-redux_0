@@ -1,11 +1,62 @@
-.c__navbar{
-    &--logo{
-        & img{
+$blue : #218693;
+$white : #ffffff;
 
+
+@mixin mar_pad-5px {
+    margin: 5px;
+    padding: 5px;
+}
+
+@mixin on_hover_scale {
+    transform: scale(1.1,1.1);
+    box-shadow:2px 2px 2px rgb(6, 163, 129);
+}
+
+.c__navbar{
+    position: sticky;
+    top:0px;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+    padding-inline: 10px;
+
+    background-color: $blue ;
+    background: linear-gradient(to top,#dffff5, #107290);
+    &--logo{
+        display:inherit;
+        align-items: center;
+
+        & img{
+            @include mar_pad-5px();
+            width: 40px;
+            height: 40px;
+
+            background-color:$white;
+            border-radius: 100%;
         }
     }
     &--menu{
+        @include mar_pad-5px();
+        display: inherit;
+        flex-direction: inherit;
+        align-items: center;
+
+
         &__element{
+            transition: 0.2s ease-in-out;
+            border-radius: 10px;
+            & p{
+                @include mar_pad-5px();       
+                font-size: 30px;
+                color:$white;
+            }
+            &:hover{
+                @include on_hover_scale();
+            }
         }
     }
 }

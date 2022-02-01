@@ -13,7 +13,6 @@ const Posts = () => {
     const posts = useAppSelector(state => state.postReducer.posts)
     const loading = useAppSelector(state => state.postReducer.loading)
     const error = useAppSelector(state => state.postReducer.error)
-    const deleted = useAppSelector(state => state.postReducer.deleted)
 
 
     const handleDelete = (e: React.MouseEvent<HTMLButtonElement>, id: number) => {
@@ -29,21 +28,23 @@ const Posts = () => {
     }, [dispatch])
 
     return (
-        <>
+        <div className="c__post">
             {error ? <Error />
             : loading ? <Loader />
             : posts?.map(card => {
                 return (
-                    <React.Fragment key={card.id}>
+                    <div className="c__post--card" key={card.id}>
                         <Card userId={card.userId} title={card.title} body={card.body} />
-                        <ButtonSubmit type="submit" onClick={(e) => handleDelete(e, card.id)}>Delete</ButtonSubmit>
-                        <ButtonLink dir={`/post/edit/${card.id}`}>
-                            Edit
-                        </ButtonLink>
-                    </React.Fragment>)
+                        <div className="c__post--card__c--btn">
+                            <ButtonSubmit className="c__post--card__c--btn__btn" type="submit" onClick={(e) => handleDelete(e, card.id)}>Delete</ButtonSubmit>
+                            <ButtonLink className="c__post--card__c--btn__btn" dir={`/post/edit/${card.id}`}>
+                                Edit
+                            </ButtonLink>
+                        </div>
+                    </div>)
                 })
             }
-        </>
+        </div>
     );
 };
 

@@ -1,0 +1,38 @@
+.c__post{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &--card{
+        display: inherit;
+        background: linear-gradient(to right,#dffff5, #107290);
+
+        margin: 5px;
+
+        border: 1px solid black;
+        border-radius: 10px;
+
+        &__c--btn{
+            display: inherit;
+            flex-direction: column;
+            justify-content: space-around;
+
+            border-radius: inherit;
+
+            padding: 5px;
+            &__btn{
+                background-color: rgb(255, 255, 255);
+                margin: 5px;
+                & p{
+                    color: rgb(10, 104, 107);
+                    font-size: large;
+
+                }
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.1,1.1);
+                }
+            }
+        }
+    }
+}

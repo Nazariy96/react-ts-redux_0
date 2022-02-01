@@ -4,8 +4,8 @@ const Error = () => {
     const error = useAppSelector(state => state.postReducer.error)
 
     return (
-        <div>
-            <h3>{error}</h3>
+        <div className="error">
+            <h3 className="error__message">{error}</h3>
         </div>
     ) 
 }

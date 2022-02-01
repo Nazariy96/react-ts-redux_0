@@ -1,3 +1,6 @@
+$green-blue:rgb(20, 151, 140);
+
+
 .lds-dual-ring {
   background-color: rgb(0, 56, 82);
   min-height:100%;
@@ -13,8 +16,8 @@
     margin:auto;
     margin-top:45vh;
     border-radius: 50%;
-    border: 2px solid rgb(20, 151, 140);
-    border-color: rgb(20, 151, 140) transparent rgb(20, 151, 140) transparent;
+    border: 2px solid $green-blue;
+    border-color: $green-blue transparent $green-blue transparent;
     animation: lds-dual-ring 0.5s linear infinite;
   }
 }
