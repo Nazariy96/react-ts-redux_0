@@ -41,7 +41,8 @@ const Posts = () => {
                                 Edit
                             </ButtonLink>
                         </div>
-                    </div>)
+                    </div>
+                    )
                 })
             }
         </div>

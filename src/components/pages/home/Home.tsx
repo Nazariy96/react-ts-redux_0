@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className="c__home">
       <header className="c__home--header">
-        <h1>Hello!!</h1>
+        <h1>Home...just filling for test</h1>
       </header>
       <div className="c__home--img">
         <img src={"./logo512.png"} alt="logo redux" />
